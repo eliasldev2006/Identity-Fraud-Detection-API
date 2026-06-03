@@ -1,9 +1,11 @@
 from fastapi import FastAPI
+from src.schemas import CadastroRequest
 
-app = FastAPI(
-    title="Identity Fraud Detection API"
-)
+app = FastAPI()
 
-@app.get("/")
-def home():
-    return {"status": "online"}
+@app.post("/api/v1/cadastro")
+def cadastro(dados: CadastroRequest):
+    return {
+        "status": "recebido",
+        "dados": dados.model_dump()
+    }

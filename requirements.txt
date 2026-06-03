@@ -1,5 +1,11 @@
 fastapi
 uvicorn[standard]
 pydantic
-google-generativeai
+email-validator
 python-dotenv
+
+google-generativeai
+
+pandas
+scikit-learn
+joblib
