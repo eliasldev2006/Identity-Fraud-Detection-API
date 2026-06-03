@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Machine Learning models (compiled binaries)
+models/*.pkl
