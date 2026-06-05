@@ -7,8 +7,8 @@ casos = [
     {
         "descricao": "Usuário legítimo",
         "dados": {
-            "nome": "Erick Lucas",
-            "email": "erick@gmail.com",
+            "nome": "Joao Pedro",
+            "email": "joao@gmail.com",
             "cpf": "12345678901",
             "idade": 22
         }
