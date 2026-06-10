@@ -3,6 +3,8 @@ fastapi
 uvicorn[standard]
 pydantic
 email-validator
+requests>=2.34.0
+
 
 # Configuração
 python-dotenv
