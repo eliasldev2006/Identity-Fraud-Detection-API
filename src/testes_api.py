@@ -41,7 +41,7 @@ casos = [
         }
     },
     {
-        "descricao": "Fraude potencial",
+        "descricao": "Alto indicio de Fraude potencial",
         "dados": {
             "nome": "Pedro Silva",
             "email": "fraudador@mailinator.com",

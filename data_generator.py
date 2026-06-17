@@ -1,4 +1,4 @@
-# src/generate_data.py
+
 import csv
 import os
 import random
@@ -14,7 +14,7 @@ print("Generating realistic synthetic data (10,000 records with noise)...")
 
 records = []
 
-for _ in range(10000):
+for _ in range(3000):
     # 70% legítimos, 30% fraude (mais balanceado)
     is_fraud = random.random() < 0.30
     

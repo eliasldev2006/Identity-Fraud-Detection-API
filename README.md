@@ -478,18 +478,6 @@ Este sistema é para fins educacionais e demonstração. Em ambiente de produç�
 
 ---
 
-## 🔮 Próximos Passos
-
-- [ ] Adicionar banco de dados PostgreSQL
-- [ ] Implementar autenticação JWT
-- [ ] Dashboard de monitoramento
-- [ ] Deploy com Docker
-- [ ] CI/CD com GitHub Actions
-- [ ] Testes unitários com pytest
-- [ ] Logging com ELK Stack
-
----
-
 <p align="center">
   Feito com ❤️ por Elias & Erick
 </p>
