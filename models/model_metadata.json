@@ -1,0 +1,146 @@
+{
+    "data_treinamento": "2026-06-11T18:56:48.791500",
+    "modelo_selecionado": "GradientBoosting",
+    "split_selecionado": "60/40",
+    "parametros": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "min_samples_split": 10,
+        "min_samples_leaf": 5,
+        "random_state": 42
+    },
+    "features": [
+        "user_age",
+        "is_disposable_email",
+        "recent_cpf_attempts",
+        "name_email_mismatch",
+        "age_squared",
+        "risk_score"
+    ],
+    "metricas": {
+        "accuracy_teste": 0.87925,
+        "cv_mean": 0.877,
+        "cv_std": 0.007252585745787476,
+        "overfitting_gap": -0.003249999999999975,
+        "auc_roc": 0.9106572990550347,
+        "f1_fraud": 0.7813490267089181,
+        "precision_fraud": 0.8510848126232742,
+        "recall_fraud": 0.7221757322175733
+    },
+    "total_registros": 10000,
+    "distribuicao_classes": {
+        "0": 7013,
+        "1": 2987
+    },
+    "comparativo": [
+        {
+            "modelo": "RandomForest_Conservador",
+            "split": "80/20",
+            "test_accuracy": 0.8805,
+            "overfitting_gap": -0.004874999999999963,
+            "cv_mean": 0.8761999999999999,
+            "f1_fraud": 0.7797235023041474,
+            "score_final": 0.8864534549159612
+        },
+        {
+            "modelo": "RandomForest_Conservador",
+            "split": "70/30",
+            "test_accuracy": 0.8766666666666667,
+            "overfitting_gap": -0.0008095238095238155,
+            "cv_mean": 0.8761999999999999,
+            "f1_fraud": 0.7768395657418576,
+            "score_final": 0.8851109375842665
+        },
+        {
+            "modelo": "RandomForest_Conservador",
+            "split": "60/40",
+            "test_accuracy": 0.87775,
+            "overfitting_gap": -0.00275000000000003,
+            "cv_mean": 0.8761999999999999,
+            "f1_fraud": 0.7794316644113668,
+            "score_final": 0.8860717995352869
+        },
+        {
+            "modelo": "RandomForest_Moderado",
+            "split": "80/20",
+            "test_accuracy": 0.878,
+            "overfitting_gap": 0.0,
+            "cv_mean": 0.8760999999999999,
+            "f1_fraud": 0.7732342007434945,
+            "score_final": 0.8841863966365943
+        },
+        {
+            "modelo": "RandomForest_Moderado",
+            "split": "70/30",
+            "test_accuracy": 0.8773333333333333,
+            "overfitting_gap": 0.0015238095238095939,
+            "cv_mean": 0.8760999999999999,
+            "f1_fraud": 0.7761557177615572,
+            "score_final": 0.8844855479791666
+        },
+        {
+            "modelo": "RandomForest_Moderado",
+            "split": "60/40",
+            "test_accuracy": 0.878,
+            "overfitting_gap": 0.0006666666666667043,
+            "cv_mean": 0.8760999999999999,
+            "f1_fraud": 0.7775752051048312,
+            "score_final": 0.8851028278760102
+        },
+        {
+            "modelo": "RandomForest_Agressivo",
+            "split": "80/20",
+            "test_accuracy": 0.8695,
+            "overfitting_gap": 0.015625,
+            "cv_mean": 0.865,
+            "f1_fraud": 0.7567567567567567,
+            "score_final": 0.8727879735050248
+        },
+        {
+            "modelo": "RandomForest_Agressivo",
+            "split": "70/30",
+            "test_accuracy": 0.8613333333333333,
+            "overfitting_gap": 0.027095238095238172,
+            "cv_mean": 0.865,
+            "f1_fraud": 0.7493975903614458,
+            "score_final": 0.8677183385361107
+        },
+        {
+            "modelo": "RandomForest_Agressivo",
+            "split": "60/40",
+            "test_accuracy": 0.8655,
+            "overfitting_gap": 0.023666666666666614,
+            "cv_mean": 0.865,
+            "f1_fraud": 0.7578757875787578,
+            "score_final": 0.8707673150412505
+        },
+        {
+            "modelo": "GradientBoosting",
+            "split": "80/20",
+            "test_accuracy": 0.8805,
+            "overfitting_gap": -0.0044999999999999485,
+            "cv_mean": 0.877,
+            "f1_fraud": 0.7797235023041474,
+            "score_final": 0.8868038435259751
+        },
+        {
+            "modelo": "GradientBoosting",
+            "split": "70/30",
+            "test_accuracy": 0.8776666666666667,
+            "overfitting_gap": -0.0009523809523810378,
+            "cv_mean": 0.877,
+            "f1_fraud": 0.7782477341389727,
+            "score_final": 0.8856615259829227
+        },
+        {
+            "modelo": "GradientBoosting",
+            "split": "60/40",
+            "test_accuracy": 0.87925,
+            "overfitting_gap": -0.003249999999999975,
+            "cv_mean": 0.877,
+            "f1_fraud": 0.7813490267089181,
+            "score_final": 0.8872009488645929
+        }
+    ]
+}
