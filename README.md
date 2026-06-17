@@ -1,9 +1,8 @@
-```markdown
 # 🛡️ Identity Fraud Detection API
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.0+-green.svg)](https://fastapi.tiangolo.com/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4.0+-orange.svg)](https://scikit-learn.org/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104%2B-green.svg)](https://fastapi.tiangolo.com/)
+[![Scikit--Learn](https://img.shields.io/badge/Scikit--Learn-1.4%2B-orange.svg)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Sistema inteligente de detecção de fraude em cadastros que combina **regras de negócio**, **Machine Learning** e **validação rigorosa** para identificar tentativas fraudulentas em tempo real.
@@ -37,10 +36,13 @@ O **Identity Fraud Detection** é uma solução completa para validação de cad
 
 ### Fluxo de Decisão
 
-```
-Requisição → Validação Pydantic → Regras de Negócio → ML Prediction → Score Final
-                                                                              ↓
-                                                                     Aprovado/Suspeito/Fraude
+```mermaid
+flowchart LR
+    A[Requisição] --> B[Validação Pydantic]
+    B --> C[Regras de Negócio]
+    C --> D[ML Prediction]
+    D --> E[Score Final]
+    E --> F{Aprovado / Suspeito / Fraude}
 ```
 
 ---
@@ -75,27 +77,16 @@ Requisição → Validação Pydantic → Regras de Negócio → ML Prediction �
 
 ## 🏗️ Arquitetura
 
-```
-┌─────────────┐     ┌────────────────┐     ┌─────────────────┐
-│   Cliente   │────▶│  FastAPI Server │────▶│ Pydantic Valid. │
-└─────────────┘     └────────────────┘     └─────────────────┘
-                            │                        │
-                            ▼                        ▼
-                    ┌──────────────┐        ┌──────────────┐
-                    │ Regras Neg.  │◀───────│  ML Model    │
-                    └──────────────┘        └──────────────┘
-                            │
-                            ▼
-                    ┌──────────────┐
-                    │ Score Final  │
-                    └──────────────┘
-                            │
-                    ┌───────┴───────┐
-                    ▼               ▼
-              ┌──────────┐   ┌──────────┐
-              │ Aprovado │   │  Fraude  │
-              │ (200 OK) │   │(403 Forb)│
-              └──────────┘   └──────────┘
+```mermaid
+flowchart TD
+    Cliente[Cliente] --> FastAPI[FastAPI Server]
+    FastAPI --> Pydantic[Validação Pydantic]
+    Pydantic --> Regras[Regras de Negócio]
+    Pydantic --> ML[ML Model]
+    ML --> Regras
+    Regras --> Score[Score Final]
+    Score --> Aprovado[Aprovado - 200 OK]
+    Score --> Fraude[Fraude - 403 Forbidden]
 ```
 
 ### Componentes Principais
@@ -143,15 +134,15 @@ Requisição → Validação Pydantic → Regras de Negócio → ML Prediction �
 ```text
 identity-fraud-detection/
 │
-├── 📂 data/                          # Dados de treinamento
+├── data/                          # Dados de treinamento
 │   └── training_records.csv          # 10.000 registros sintéticos
 │
-├── 📂 models/                        # Modelos treinados
+├── models/                        # Modelos treinados
 │   ├── fraud_detector_model.pkl      # Modelo Random Forest
 │   ├── model_features.json           # Features utilizadas
 │   └── model_metadata.json           # Métricas e parâmetros
 │
-├── 📂 src/                           # Código fonte
+├── src/                           # Código fonte
 │   ├── __init__.py
 │   ├── main.py                       # API FastAPI + regras
 │   ├── predict.py                    # Engine de predição
@@ -159,10 +150,10 @@ identity-fraud-detection/
 │   ├── train_model.py                # Pipeline de treinamento
 │   └── testes_api.py                 # Testes automatizados
 │
-├── 📄 data_generator.py              # Gerador de dados sintéticos
-├── 📄 requirements.txt               # Dependências
-├── 📄 .gitignore                     # Arquivos ignorados
-└── 📄 README.md                      # Documentação
+├── data_generator.py              # Gerador de dados sintéticos
+├── requirements.txt               # Dependências
+├── .gitignore                     # Arquivos ignorados
+└── README.md                      # Documentação
 ```
 
 ---
@@ -330,8 +321,14 @@ Content-Type: application/json
 
 ### Pipeline de Treinamento
 
-```
-Dados Sintéticos → Feature Engineering → 4 Algoritmos → 3 Splits → Cross-Validation → Seleção do Melhor → Modelo Final
+```mermaid
+flowchart LR
+    A[Dados Sintéticos] --> B[Feature Engineering]
+    B --> C[4 Algoritmos]
+    C --> D[3 Splits]
+    D --> E[Cross-Validation]
+    E --> F[Seleção do Melhor]
+    F --> G[Modelo Final]
 ```
 
 ### Algoritmos Testados
@@ -481,4 +478,3 @@ Este sistema é para fins educacionais e demonstração. Em ambiente de produç�
 <p align="center">
   Feito com ❤️ por Elias & Erick
 </p>
-```
