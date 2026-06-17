@@ -475,6 +475,9 @@ Este sistema é para fins educacionais e demonstração. Em ambiente de produç�
 
 ---
 
-<p align="center">
-  Feito com ❤️ por Elias & Erick
-</p>
+## 👨‍💻 Autores
+
+| Foto | Nome | GitHub |
+|------|------|--------|
+| <img src="https://github.com/SEU_USUARIO_GITHUB_ELIAS.png" width="80"> | Elias | [@SEU_USUARIO_GITHUB_ELIAS](https://github.com/SEU_USUARIO_GITHUB_ELIAS) |
+| <img src="https://github.com/SEU_USUARIO_GITHUB_ERICK.png" width="80"> | Erick | [@SEU_USUARIO_GITHUB_ERICK](https://github.com/SEU_USUARIO_GITHUB_ERICK) |
