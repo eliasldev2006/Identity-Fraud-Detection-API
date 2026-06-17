@@ -479,5 +479,5 @@ Este sistema é para fins educacionais e demonstração. Em ambiente de produç�
 
 | Foto | Nome | GitHub |
 |------|------|--------|
-| <img src="https://github.com/SEU_USUARIO_GITHUB_ELIAS.png" width="80"> | Elias | [@SEU_USUARIO_GITHUB_ELIAS](https://github.com/SEU_USUARIO_GITHUB_ELIAS) |
-| <img src="https://github.com/SEU_USUARIO_GITHUB_ERICK.png" width="80"> | Erick | [@SEU_USUARIO_GITHUB_ERICK](https://github.com/SEU_USUARIO_GITHUB_ERICK) |
+| <img src="https://github.com/eliasldev2006.png" width="80"> | Elias | [@eliasldev2006](https://github.com/eliasldev2006) |
+| <img src="https://github.com/Erickx00.png" width="80"> | Erick | [@Erickx00](https://github.com/Erickx00) |
